@@ -35,9 +35,11 @@ class MyTo_doApp extends StatelessWidget {
       backgroundColor:Colors.grey.shade100,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: const CircleAvatar(
-          backgroundImage: NetworkImage("https://images.unsplash.com/photo-1633113215883-a43e36bc6178?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=700&q=60"),
-          ),
+        leading: Center(
+          child: const CircleAvatar(
+            backgroundImage: NetworkImage("https://images.unsplash.com/photo-1633113215883-a43e36bc6178?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=700&q=60"),
+            ),
+        ),
           title: Text("My Task", style:TextStyle(color:Colors.indigo.shade900,),),
           actions:  [
             Icon(Icons.filter_list, color:Colors.indigo.shade900,),
