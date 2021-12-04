@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -105,8 +107,10 @@ class MyTo_doApp extends StatelessWidget {
          child: Padding(
            padding: const EdgeInsets.all(15.0),
            child: Row(
+             // ignore: prefer_const_literals_to_create_immutables
              children: [
                Icon(Icons.check_circle, color: Color.fromRGBO(56, 53, 123, 1)),
+               SizedBox(width: 20,),
                Text("Completed"),
                Icon(Icons.arrow_drop_down_outlined, color: Color.fromRGBO(92, 98, 122, 1),),
                Spacer(),
