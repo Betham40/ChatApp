@@ -46,54 +46,57 @@ class MyTo_doApp extends StatelessWidget {
             Icon(Icons.search, color:Colors.indigo.shade900,) 
           ],
       ),
-      body: Column(
-        children: [
-          TodoWidget(
-            todo: "The family's trip to Finland next summer", 
-            time: 'yestaday', 
-            task: 'Plan the trip to Finland', 
-            color: Colors.purpleAccent, 
-          icon: Icons.notifications,),
-          TodoWidget(todo: "", 
-            time: 'Today 11:00', 
-            task: "Plan Susan's birthday", 
-            color: Colors.blue, 
-          icon: Icons.notifications_outlined,),
-          TodoWidget(
-            todo: "Get tomatoes, lettuce, potatoes, green beans, cream and beef fillet. Also buy red wine at John's Wine Shop", 
-            time: 'Today 15:00', 
-            task: 'Groceries for dinner', 
-            color: Colors.blue,
-          icon: Icons.notifications_outlined,
-          ),
-          TodoWidget(
-            todo: "Send the presentation to Bill", 
-            time: 'Tomorrow', 
-            task: 'Port projects', 
-            color: Colors.grey, 
-          icon: Icons.notifications_outlined,
-          ),
-          TodoWidget(
-            todo: "", 
-            time: 'Fri 30, Oct', 
-            task: 'Take jacket for cleaning', 
-            color: Colors.grey, 
-          icon: Icons.notifications_outlined,
-          ),
-          TodoWidget(
-            todo: "Install the latest update and check wireless connection", 
-            time: '', 
-            task: "Fix dad's PC", 
-            color: Colors.grey, 
-          icon: Icons.notifications_outlined,),
-          TodoWidget(
-            todo: "Talk to Monica about this trip", 
-            time: '', 
-            task: "Trip to Stockholm", 
-            color: Colors.grey, 
-          icon: Icons.notifications_outlined,
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(
+          children: [
+            TodoWidget(
+              todo: "The family's trip to Finland next summer", 
+              time: 'yestaday', 
+              task: 'Plan the trip to Finland', 
+              color: Colors.purpleAccent, 
+            icon: Icons.notifications,),
+            TodoWidget(todo: "", 
+              time: 'Today 11:00', 
+              task: "Plan Susan's birthday", 
+              color: Colors.blue, 
+            icon: Icons.notifications_outlined,),
+            TodoWidget(
+              todo: "Get tomatoes, lettuce, potatoes, green beans, cream and beef fillet. Also buy red wine at John's Wine Shop", 
+              time: 'Today 15:00', 
+              task: 'Groceries for dinner', 
+              color: Colors.blue,
+            icon: Icons.notifications_outlined,
+            ),
+            TodoWidget(
+              todo: "Send the presentation to Bill", 
+              time: 'Tomorrow', 
+              task: 'Port projects', 
+              color: Colors.grey, 
+            icon: Icons.notifications_outlined,
+            ),
+            TodoWidget(
+              todo: "", 
+              time: 'Fri 30, Oct', 
+              task: 'Take jacket for cleaning', 
+              color: Colors.grey, 
+            icon: Icons.notifications_outlined,
+            ),
+            TodoWidget(
+              todo: "Install the latest update and check wireless connection", 
+              time: '', 
+              task: "Fix dad's PC", 
+              color: Colors.grey, 
+            icon: Icons.notifications_outlined,),
+            TodoWidget(
+              todo: "Talk to Monica about this trip", 
+              time: '', 
+              task: "Trip to Stockholm", 
+              color: Colors.grey, 
+            icon: Icons.notifications_outlined,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -134,8 +137,6 @@ class TodoWidget extends StatelessWidget {
               )],
           ),
           ),
-
-          
         ),
         ),
     );
