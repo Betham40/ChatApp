@@ -107,7 +107,6 @@ class MyTo_doApp extends StatelessWidget {
            child: Row(
              children: [
                Icon(Icons.check_circle, color: Color.fromRGBO(56, 53, 123, 1)),
-               Spacer(flex: 1,),
                Text("Completed"),
                Icon(Icons.arrow_drop_down_outlined, color: Color.fromRGBO(92, 98, 122, 1),),
                Spacer(),
