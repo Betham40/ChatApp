@@ -98,6 +98,25 @@ class MyTo_doApp extends StatelessWidget {
           ],
         ),
       ),
+      bottomSheet: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Card(
+          color: Color.fromRGBO(220, 229, 238, 1),
+         child: Padding(
+           padding: const EdgeInsets.all(15.0),
+           child: Row(
+             children: [
+               Icon(Icons.check_circle, color: Color.fromRGBO(56, 53, 123, 1)),
+               Spacer(flex: 1,),
+               Text("Completed"),
+               Icon(Icons.arrow_drop_down_outlined, color: Color.fromRGBO(92, 98, 122, 1),),
+               Spacer(),
+               Text("24")
+             ],
+           ),
+         ),
+        ),
+      ),
     );
   }
 }
