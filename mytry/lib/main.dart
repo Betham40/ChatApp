@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 
 import 'home_view.dart';
@@ -17,9 +15,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        
         primarySwatch: Colors.blue,
       ),
-      home: const MyTo_doApp(),
+      home: HomeView(),
     );
   }
 }
+
