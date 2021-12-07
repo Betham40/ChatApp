@@ -18,33 +18,36 @@ class CreateTodo extends StatelessWidget {
        height: 100,
      ),
      TextFormField(
-       decoration: const InputDecoration(label: Padding(
-         padding: EdgeInsets.only(bottom: 165.0),
-         child: Text("Description"),
-       ),
+       decoration: const InputDecoration(label: Text("Description"),
        ),
      ),
       Row(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+          Expanded(
             child: TextFormField(
-       decoration: const InputDecoration(label: Text("Start Date"),
-       ),
-     ),
+                 decoration: const InputDecoration(label: Text("Start Date"),
+                 ),
+               ),
           ),
-          SizedBox(height: 90,),
-     Padding(
-       padding: const EdgeInsets.all(8.0),
-       child: Expanded(
-         child: TextFormField(
-           decoration: const InputDecoration(label: Text("End Date")),
-           ),
+          SizedBox(width: 10,),
+     Expanded(
+       child: TextFormField(
+         decoration: const InputDecoration(label: Text("End Date")),
          ),
        ),]
      ),
+     const SizedBox(
+       height: 30,
+     ),
+     Padding(
+       padding: const EdgeInsets.all(8.0),
+       child: TextButton(onPressed: () {}, child: const Text("Create", style:  TextStyle(color: Colors.white, fontSize: 30,)
+       ),
+       style: TextButton.styleFrom(backgroundColor: Colors.blue),),
+     )
         ],
       ),
+      
       );
     
   }
