@@ -123,7 +123,7 @@ class MyTo_doApp extends StatelessWidget {
            child: Padding(
              padding: const EdgeInsets.all(15.0),
              child: Row(
-               children: [
+               children: const [
                  Icon(Icons.check_circle, color: Color.fromRGBO(56, 53, 123, 1)),
                  SizedBox(width: 20,),
                  Text("Completed"),
