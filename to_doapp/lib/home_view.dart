@@ -36,6 +36,8 @@ class MyTo_doApp extends StatelessWidget {
             Icon(Icons.filter_list, color:Colors.indigo.shade900,),
             Icon(Icons.search, color:Colors.indigo.shade900,) 
           ],
+          // this part shows the main functions of the App
+          // this includes the card, the text, icons e.t.c.
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -96,7 +98,6 @@ class MyTo_doApp extends StatelessWidget {
          child: Padding(
            padding: const EdgeInsets.all(15.0),
            child: Row(
-             // ignore: prefer_const_literals_to_create_immutables
              children: [
                Icon(Icons.check_circle, color: Color.fromRGBO(56, 53, 123, 1)),
                SizedBox(width: 20,),
@@ -112,7 +113,7 @@ class MyTo_doApp extends StatelessWidget {
     );
   }
 }
-
+// this consists of the variables assigned to specific functions
 class TodoWidget extends StatelessWidget {
   const TodoWidget({
     Key? key, required this.task, required this.todo, required this.time, required this.color, required this.icon,
@@ -127,8 +128,7 @@ class TodoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 15,
-      color: Colors.white
-      ,
+      color: Colors.white,
       child: Padding(
         padding: EdgeInsets.only(top:8.0),
         child: ListTile(
@@ -145,7 +145,8 @@ class TodoWidget extends StatelessWidget {
             children: <Widget>[
               Icon(icon, size: 15, color: color,),
               Text(time, style: TextStyle(color: color,fontSize: 10,),
-              )],
+              )
+              ],
           ),
           ),
         ),
