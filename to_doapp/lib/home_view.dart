@@ -1,5 +1,6 @@
 //This will allow you to use the widget in my app
 import 'package:flutter/material.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 import 'create_todo_view.dart';
 
@@ -7,10 +8,12 @@ import 'create_todo_view.dart';
 class MyTo_doApp extends StatelessWidget {
   const MyTo_doApp({ Key? key }) : super(key: key);
 
+  get children => null;
+
   @override
   Widget build(BuildContext context) {
-    //The scaffold is the root widget of our 
-    //app (it has the AppBar, floatingAction button, e.t.c.)
+    //The scaffold is the root widget of our app 
+    //(it has the AppBar, floatingAction button, e.t.c.)
     return Scaffold(
       floatingActionButton: FloatingActionButton(onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder:(context) {
@@ -42,7 +45,7 @@ class MyTo_doApp extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ListView(
-          children: [
+          children: const [
             TodoWidget(
               todo: "The family's trip to Finland next summer", 
               time: 'yestaday', 
@@ -91,23 +94,46 @@ class MyTo_doApp extends StatelessWidget {
           ],
         ),
       ),
-      bottomSheet: Padding(
+      bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(10.0),
-        child: Card(
-          color: Color.fromRGBO(220, 229, 238, 1),
-         child: Padding(
-           padding: const EdgeInsets.all(15.0),
-           child: Row(
-             children: [
-               Icon(Icons.check_circle, color: Color.fromRGBO(56, 53, 123, 1)),
-               SizedBox(width: 20,),
-               Text("Completed"),
-               Icon(Icons.arrow_drop_down_outlined, color: Color.fromRGBO(92, 98, 122, 1),),
-               Spacer(),
-               Text("24")
-             ],
+        // This is the card at the bottom of the hompage showing 
+        // the completed task and number of completed task
+        child: InkWell(
+          onTap: (){
+            showBarModalBottomSheet(context: context, builder: (context){
+              return ListView(
+                children: const[  TodoWidget(
+              todo: "The family's trip to Finland next summer", 
+              time: 'yestaday', 
+              task: 'Plan the trip to Finland', 
+              color: Colors.purpleAccent, 
+            icon: Icons.notifications,),
+             TodoWidget(
+              todo: "The family's trip to Finland next summer", 
+              time: 'yestaday', 
+              task: 'Plan the trip to Finland', 
+              color: Colors.purpleAccent, 
+            icon: Icons.notifications,),
+            ],
+            );
+            });
+          },
+          child: Card(
+            color: Color.fromRGBO(220, 229, 238, 1),
+           child: Padding(
+             padding: const EdgeInsets.all(15.0),
+             child: Row(
+               children: [
+                 Icon(Icons.check_circle, color: Color.fromRGBO(56, 53, 123, 1)),
+                 SizedBox(width: 20,),
+                 Text("Completed"),
+                 Icon(Icons.arrow_drop_down_outlined, color: Color.fromRGBO(92, 98, 122, 1),),
+                 Spacer(),
+                 Text("24")
+               ],
+             ),
            ),
-         ),
+          ),
         ),
       ),
     );

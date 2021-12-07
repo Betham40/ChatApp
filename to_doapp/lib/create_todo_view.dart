@@ -41,7 +41,7 @@ class CreateTodo extends StatelessWidget {
      ),
      Padding(
        padding: const EdgeInsets.all(8.0),
-       child: TextButton(onPressed: () {}, child: const Text("Create", style:  TextStyle(color: Colors.white, fontSize: 30,)
+       child: TextButton(onPressed: () {}, child: const Text("Create", style:  TextStyle(color: Colors.white, fontSize: 20,)
        ),
        style: TextButton.styleFrom(backgroundColor: Colors.blue),),
      )
