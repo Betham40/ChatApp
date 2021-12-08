@@ -11,14 +11,14 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Electrical Hub",
         style: TextStyle(
-          fontSize: 30,
+          fontSize: 20,
           color: Colors.cyanAccent
         ),
         ),
         backgroundColor: Colors.amberAccent,
         actions: [
-          Icon(Icons.filter_list, color: Colors.amberAccent,),
-          Icon(Icons.search, color: Colors.amberAccent)
+          Icon(Icons.filter_list, color: Colors.cyanAccent,),
+          Icon(Icons.search, color: Colors.cyanAccent)
         ],
       ),
       body: ListView(
@@ -59,7 +59,7 @@ class TabWidget extends StatelessWidget {
           title: Text(service,
            style: TextStyle(
              color: Colors.greenAccent, 
-             fontSize: 35,
+             fontSize: 25,
              fontWeight: FontWeight.bold,
              ),
              ),

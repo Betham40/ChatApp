@@ -162,7 +162,7 @@ class TodoWidget extends StatelessWidget {
           title: Text(task, style: TextStyle(color: Colors.indigo, fontSize: 15, fontWeight: FontWeight.bold)
           ),
           subtitle: Text( todo, maxLines: 3,overflow: TextOverflow.ellipsis,
-          style: TextStyle(color: color, fontSize: 10,),
+          style: TextStyle(color: Colors.grey, fontSize: 10,),
           ),
           trailing: Padding(padding: const EdgeInsets.only(bottom: 30),
           child: Row(
