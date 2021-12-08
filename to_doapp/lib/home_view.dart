@@ -5,6 +5,7 @@ import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'create_todo_view.dart';
 
 //This is the class of my home page
+// ignore: camel_case_types
 class MyTo_doApp extends StatelessWidget {
   const MyTo_doApp({ Key? key }) : super(key: key);
 
@@ -17,11 +18,11 @@ class MyTo_doApp extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder:(context) {
-          return CreateTodo();
+          return const CreateTodo();
         }
         ));
       },
-      child: Icon(Icons.add,
+      child: const Icon(Icons.add,
       size: 40,
       ),
       ),
@@ -29,8 +30,8 @@ class MyTo_doApp extends StatelessWidget {
       // this shows the name of the interface, profile picture
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: Center(
-          child: const CircleAvatar(
+        leading: const Center(
+          child:  CircleAvatar(
             backgroundImage: NetworkImage("https://images.unsplash.com/photo-1633113215883-a43e36bc6178?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=700&q=60"),
             ),
         ),
@@ -119,7 +120,7 @@ class MyTo_doApp extends StatelessWidget {
             });
           },
           child: Card(
-            color: Color.fromRGBO(220, 229, 238, 1),
+            color: const Color.fromRGBO(220, 229, 238, 1),
            child: Padding(
              padding: const EdgeInsets.all(15.0),
              child: Row(
@@ -156,13 +157,13 @@ class TodoWidget extends StatelessWidget {
       elevation: 15,
       color: Colors.white,
       child: Padding(
-        padding: EdgeInsets.only(top:8.0),
+        padding: const EdgeInsets.only(top:8.0),
         child: ListTile(
           leading: Icon(Icons.check_circle_outline, color:color,size: 29, ),
-          title: Text(task, style: TextStyle(color: Colors.indigo, fontSize: 15, fontWeight: FontWeight.bold)
+          title: Text(task, style: const TextStyle(color: Colors.indigo, fontSize: 15, fontWeight: FontWeight.bold)
           ),
           subtitle: Text( todo, maxLines: 3,overflow: TextOverflow.ellipsis,
-          style: TextStyle(color: Colors.grey, fontSize: 10,),
+          style: const TextStyle(color: Colors.grey, fontSize: 10,),
           ),
           trailing: Padding(padding: const EdgeInsets.only(bottom: 30),
           child: Row(
