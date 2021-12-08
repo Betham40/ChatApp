@@ -7,14 +7,14 @@ class CreateTodo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
      appBar: AppBar(
-       title: Text("Create To-do"),
+       title: const Text("Create To-do"),
      ), 
      body: ListView(
       children:[ TextFormField(
        decoration: const InputDecoration(label: Text("Title"),
        ),
      ),
-     SizedBox(
+     const SizedBox(
        height: 100,
      ),
      TextFormField(
@@ -29,7 +29,7 @@ class CreateTodo extends StatelessWidget {
                  ),
                ),
           ),
-          SizedBox(width: 10,),
+        const SizedBox(width: 10,),
      Expanded(
        child: TextFormField(
          decoration: const InputDecoration(label: Text("End Date")),
