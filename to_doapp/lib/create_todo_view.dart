@@ -18,7 +18,10 @@ class CreateTodo extends StatelessWidget {
        height: 100,
      ),
      TextFormField(
-       decoration: const InputDecoration(label: Text("Description"),
+       decoration: const InputDecoration(label: Padding(
+         padding: EdgeInsets.only(bottom: 100),
+         child: Text("Description"),
+       ),
        ),
      ),
       Row(
@@ -40,7 +43,7 @@ class CreateTodo extends StatelessWidget {
        height: 30,
      ),
      Padding(
-       padding: const EdgeInsets.all(8.0),
+       padding: const EdgeInsets.only(top:10, left: 100, right: 100),
        child: TextButton(onPressed: () {}, child: const Text("Create", style:  TextStyle(color: Colors.white, fontSize: 20,)
        ),
        style: TextButton.styleFrom(backgroundColor: Colors.blue),),

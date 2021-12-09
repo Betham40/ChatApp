@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/action.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({ Key? key }) : super(key: key);
@@ -14,6 +15,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.cyanAccent,
+      ),
      body: ListView(
        children: [
          Card(
@@ -36,9 +40,17 @@ class _HomePageState extends State<HomePage> {
                ButtonBar(
                  alignment: MainAxisAlignment.start,
                  children: [
-                   FlatButton(onPressed: () {}, child: Text('Action 1'),
+                   FlatButton(onPressed: () {
+                     Navigator.push(context, MaterialPageRoute(builder: (context){
+                       return const FirstPage();
+                     }));
+                   },
+                   color: Colors.cyanAccent,
+                    child: const Text('Action 1'),
                    ),
-                   FlatButton(onPressed: () {}, child: Text('Action 2'),
+                    FlatButton(onPressed: () {},
+                   color: Colors.cyanAccent,
+                    child: Text('Action 2'),
                    ),
                  ],
                  ),
@@ -66,9 +78,13 @@ class _HomePageState extends State<HomePage> {
                ButtonBar(
                  alignment: MainAxisAlignment.start,
                  children: [
-                   FlatButton(onPressed: () {}, child: Text('Action 1'),
+                   FlatButton(onPressed: () {},
+                   color: Colors.redAccent,
+                    child: Text('Action 1'),
                    ),
-                   FlatButton(onPressed: () {}, child: Text('Action 2'),
+                   FlatButton(onPressed: () {}, 
+                   color: Colors.redAccent,
+                   child: Text('Action 2'),
                    ),
                  ],
                  ),

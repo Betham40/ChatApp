@@ -7,9 +7,34 @@ import 'create_todo_view.dart';
 //This is the class of my home page
 // ignore: camel_case_types
 class MyTo_doApp extends StatelessWidget {
-  const MyTo_doApp({ Key? key }) : super(key: key);
+   MyTo_doApp({ Key? key }) : super(key: key);
+  final List<Map<String, dynamic>>  mydatabase = [
 
-  get children => null;
+    {
+      'title': 'My graduation ceremony',
+      'description': 'It will take place at TTU park',
+      'time': 'Yesterday',
+      'isCompleted': false
+    },
+    {
+      'title': 'My lunch time',
+      'description': 'Buy gob3 and plantain, add tuo zaafi for now',
+      'title': 'Tomorrow',
+      'isCompleted': true
+    },
+
+
+
+
+
+
+
+
+
+
+  ];
+
+
 
   @override
   Widget build(BuildContext context) {
