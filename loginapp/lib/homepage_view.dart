@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:loginapp/loginpage_view.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({ Key? key }) : super(key: key);
@@ -11,15 +12,30 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Electrical Hub",
         style: TextStyle(
-          fontSize: 20,
-          color: Colors.cyanAccent
+          fontSize: 25,
+          color: Colors.blue
         ),
         ),
         backgroundColor: Colors.amberAccent,
         actions: [
-          Icon(Icons.filter_list, color: Colors.cyanAccent,),
-          Icon(Icons.search, color: Colors.cyanAccent)
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextButton(onPressed: () {
+               Navigator.push(context, MaterialPageRoute(builder: (context) 
+                {
+                  return LoginPage();
+                }));
+            }, 
+            style: TextButton.styleFrom(backgroundColor: Colors.blue, fixedSize: Size(5, 2),),
+            child: Text("Logout", 
+            style: TextStyle(color: Colors.white, fontSize: 15),)
+            ),
+          )
         ],
+        // actions: [
+        //   Icon(Icons.filter_list, color: Colors.cyanAccent,),
+        //   Icon(Icons.share, color: Colors.cyanAccent)
+        // ],
       ),
       body: ListView(
         children: [
@@ -58,13 +74,13 @@ class TabWidget extends StatelessWidget {
           ),
           title: Text(service,
            style: TextStyle(
-             color: Colors.greenAccent, 
+             color: Colors.white, 
              fontSize: 25,
              fontWeight: FontWeight.bold,
              ),
              ),
         ),
-        color: Colors.orangeAccent,
+        color: Colors.blue,
         elevation: 15,
       
       ),
